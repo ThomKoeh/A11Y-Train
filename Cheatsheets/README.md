@@ -1,0 +1,2 @@
+alle Cheatsheets und weitere Informationen zum Beispiel Tastatursteuertung unter macOS bei der Deque unter dem Link
+[Deque - Screen Reader Keyboard Shortcuts and Gestures](https://dequeuniversity.com/screenreaders/)
