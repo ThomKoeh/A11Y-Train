@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Grafiken - Screenreaderausgaben</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesNeuer.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+
+<body>
+    <header tabindex="-1" id="hd">
+        <img height="60" id="headerlogo" src="LogoPP.png"
+            alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="Formularelemente.html">Formularelemente</a></li>
+                <li><a href="Tables.html">Tabellen</a></li>
+                <li><a href="Listen.html">Listen</a></li>
+                <li><a href="Grafiken.html" aria-current="page">Grafiken</a></li>
+                <li><a href="LinksButtons.html">Links und Buttons</a></li>
+                <li><a href="Text.html">Text</a></li>
+                <li><a href="Akkordeon.html">Akkordeon</a></li>
+                <li><a href="karousell.html">Karussell</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Grafiken und Alternativtexte</h1>
+        <p>Diese Seite soll veranschaulichen, wie Grafiken für Nutzer von Screenreadern beschriftet werden können, und
+            wo potenzielle Fehler liegen.</p>
+        <div id="flexcont">
+            <div class="flexitem">
+                <h2>Grafik mit korrektem <code>alt</code>-Attribut</h2>
+                <img src="qualle.jpg" alt="mehrere Ohrenquallen">
+            </div>
+            <div class="flexitem">
+                <h2>Grafik ohne <code>alt</code>-Attribut</h2>
+                <img src="tree.jpg">
+            </div>
+            <div class="flexitem">
+                <h2>Grafik mit leerem <code>alt</code>-Attribut</h2>
+                <img src="wall1.jpg" alt="">
+            </div>
+            <div class="flexitem">
+                <h2>verlinkte Grafik mit korrektem <code>alt</code>-Attribut</h2>
+                <a href="https://www.pfennigparade.de/">
+                    <img id="logoimg" src="LogoPP.png" alt="Zur Seite der Pfennigparade - Die Zukunft zählt auf uns.">
+                </a>
+            </div>
+        </div>
+        <div id="backwrap">
+            <h2>Hintergrundbild</h2>
+            <p>Der nachfolgende Bereich enthält ein Hintergrundbild. Hier kann kein <code>alt</code>-Attribut hinterlegt
+                werden. Es wird durch einen versteckten HTML-Textabsatz ersetzt.</p>
+            <div id="backgroundimg">
+                <p class="sr-only">Bild der Passstraße Trollstigen in Norwegen.</p>
+            </div>
+        </div>
+    </main>
+    <footer>Stiftung Pfennigparade 2024</footer>
+</body>
+
+</html>

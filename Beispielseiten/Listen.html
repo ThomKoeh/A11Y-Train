@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title id="pgt">Listen - Screenreaderausgaben</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesNeuer.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+
+<body>
+    <header tabindex="-1" id="hd">
+        <img height="60" id="headerlogo" src="LogoPP.png"
+            alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="Formularelemente.html">Formularelemente</a></li>
+                <li><a href="Tables.html">Tabellen</a></li>
+                <li><a href="Listen.html" aria-current="page">Listen</a></li>
+                <li><a href="Grafiken.html">Grafiken</a></li>
+                <li><a href="LinksButtons.html">Links und Buttons</a></li>
+                <li><a href="Text.html">Text</a></li>
+                <li><a href="Akkordeon.html">Akkordeon</a></li>
+                <li><a href="karousell.html">Karussell</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="maincont">
+        <main>
+            <h1 id="ueschrift">Listen</h1>
+            <p>Diese Seite soll veranschaulichen, wie Nutzer von Screenreadern Listen wahrnehmen können</p>
+            <h2 id="listlabel1">Liste mit nativem HTML</h2>
+            <p>Diese Liste ist mit reinem HTML umgesetzt. Hierfür wird ein <code>ul</code>-Element (ungeordnete Liste)
+                verwendet.</p>
+            <ul aria-labelledby="listlabel1">
+                <li>erster Eintrag natives HTML</li>
+                <li>zweiter Eintrag natives HTML</li>
+                <li>dritter Eintrag natives HTML</li>
+                <li>vierter Eintrag natives HTML</li>
+                <li>fünfter Eintrag natives HTML</li>
+                <li>sechster Eintrag natives HTML</li>
+                <li>siebter Eintrag natives HTML</li>
+            </ul>
+
+            <div role="heading" aria-level="2">Liste ohne geeigenetem Markup</div>
+            <p>Diese Liste ist mit nicht semantischen HTML-Elementen und <strong>ohne</strong> WAI-ARIA umgesetzt.</p>
+            <div>
+                <div>- erster Eintrag ohne Semantik</div>
+                <div>- zweiter Eintrag ohne Semantik</div>
+                <div>- dritter Eintrag ohne Semantik</div>
+                <div>- vierter Eintrag ohne Semantik</div>
+                <div>- fünfter Eintrag ohne Semantik</div>
+                <div>- sechster Eintrag ohne Semantik</div>
+                <div>- siebter Eintrag ohne Semantik</div>
+            </div>
+
+            <h2 id="listlabel2">Liste mit WAI-ARIA</h2>
+            <p>Diese Liste ist mit nicht semantischen HTML-Elementen <strong>mit</strong> WAI-ARIA umgesetzt. Hierfür
+                wird <code>role="list"</code> auf dem äußeren Container und <code>role="listitem"</code> für die
+                Listeneinträge verwendet</p>
+            <div role="list" aria-labelledby="listlabel2">
+                <div role="listitem">- erster Eintrag mit WAI-ARIA</div>
+                <div role="listitem">- zweiter Eintrag mit WAI-ARIA</div>
+                <div role="listitem">- dritter Eintrag mit WAI-ARIA</div>
+                <div role="listitem">- vierter Eintrag mit WAI-ARIA</div>
+                <div role="listitem">- fünfter Eintrag mit WAI-ARIA</div>
+                <div role="listitem">- sechster Eintrag mit WAI-ARIA</div>
+                <div role="listitem">- siebter Eintrag mit WAI-ARIA</div>
+            </div>
+        </main>
+    </div>
+    <footer>Stiftung Pfennigparade 2024</footer>
+</body>
+
+</html>

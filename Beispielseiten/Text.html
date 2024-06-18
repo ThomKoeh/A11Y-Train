@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title id="pgt">Überschriften und Text - Screenreaderausgaben</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesNeuer.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+
+<body>
+    <header tabindex="-1" id="hd">
+        <img height="60" id="headerlogo" src="LogoPP.png"
+            alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="Formularelemente.html">Formularelemente</a></li>
+                <li><a href="Tables.html">Tabellen</a></li>
+                <li><a href="Listen.html">Listen</a></li>
+                <li><a href="Grafiken.html">Grafiken</a></li>
+                <li><a href="LinksButtons.html">Links und Buttons</a></li>
+                <li><a href="Text.html" aria-current="page">Text</a></li>
+                <li><a href="Akkordeon.html">Akkordeon</a></li>
+                <li><a href="karousell.html">Karussell</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="maincont">
+        <main>
+            <h1 id="ueschrift">Überschriften und Fließtext</h1>
+            <p>Diese Seite soll veranschaulichen, wie Nutzer von Screenreadern Überschriften und Text wahrnehmen können,
+                und wie Links im Fließtext gestaltet werden sollen.</p>
+            <h2>Testabsatz mit Hervorhebungen</h2>
+            <p>Prinzipiell sollten Hervorhebungen in Texten mit <code>strong</code> oder <code>em</code> gekennzeichnet
+                werden.
+                Mit diesen beiden Attributen kann <strong>Fettung</strong> und <em>Kursivschrift</em> bewirkt werden.
+                Hervorhebungen mit
+                <code>b</code> oder <code>i</code> können von assistiven Systemen nicht erkannt werden.
+            </p>
+            <p>Absätze sollen stets mit dem <code>p</code>-Tag gekennzeichnet werden.</p>
+            <div role="heading" aria-level="2">Überschriften mit WAI-ARIA auszeichnen</div>
+            <p>Überschriften können auf Codeebene auch mit WAI-ARIA gekennzeichnet werden. Die dafür vorgesehenen
+                Attribute sind <code>role="heading"</code> und <code>aria-level</code> mit dem entsprechenden Wert zu
+                Angabe der Ebene.</p>
+            <p>Die vorangestellte Überschrift ist mit WAI-ARIA ausgezeichnet.</p>
+            <div role="heading" aria-level="2">Links im Fließtext</div>
+            <p>Links in Fließtexten sollen vom umgebenden Text unterscheidbar sein. Das sollte durch eine zusätzliche
+                Hervorhebung (zum Beispiel Unterstreichung, Fettung oder Kursivschrift, Invertierung) geschehen.</p>
+            <p>Zum Beispiel ist der folgende Link <a href="https://www.digitale-barrierefreiheit.de">zur Seite der
+                    Pfennigparade</a> durch Unterstreichung hervorgehoben.
+                Der zweite Link <a id="textlink" href="https://www.digitale-barrierefreiheit.de">zur Seite der
+                    Pfennigparade</a> ist nicht vom Fließtext zu unterscheiden.</p>
+            <p>Eine Ausnahme gilt für den Fall, wenn das Kontrastverhältnis zwischen Linkfarbe und umgebender Textfarbe
+                mindestens 3:1 beträgt und der Link bei Fokuserhalt zusätzlich hervorgehoben wird.</p>
+
+            <h2>Anderssprachige Texte</h2>
+            <p>Texte, die nicht in der Hauptsprache des Webauftritts verfasst sind, sollen auf Codeebene mit dem
+                <code>lang</code>-Attribut ausgezeichnet werden, um die korrekte Aussprache durch den Screenreader zu
+                gewährleisten.</p>
+            <p lang="en">Texts that are not written in the main language of the website should be marked with the
+                <code>lang</code> attribute at code level to ensure correct pronunciation by the screenreader.</p>
+                <h3>Der selbe Text ohne das <code>lang</code>-Attribut: </h3>
+            <p>Texts that are not written in the main language of
+                the website should be marked with the <code>lang</code> attribute at code level to ensure correct
+                pronunciation by the screenreader.</p>
+
+            <h2>Zitate</h2>
+            Textabschnitte, die ein Zitat darstellen sollen auf Codeebene mit dem HTML-Element <code>blockquote</code>
+            ausgezeichnet werden. Korrekt ausgezeichnete Zitate können mit dem Screenreader angesprungen werden. Der folgende Text stellt ein solches Zitat dar.
+            <blockquote>"Als Vergleich für den zugänglichen Namen kann man den Namen eines Menschen heranziehen. Man
+                sieht ihn nicht, bekommt ihn allerdings auf Anfrage gesagt, und der Mensch reagiert, wenn man ihn
+                nennt."
+            </blockquote>
+        </main>
+    </div>
+    <footer>Stiftung Pfennigparade 2024</footer>
+</body>
+
+</html>

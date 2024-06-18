@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Tabellen - Screenreaderausgaben</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesNeuer.css">
+
+</head>
+
+<body>
+    <header tabindex="-1" id="hd">
+        <img height="60" id="headerlogo" src="LogoPP.png"
+            alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
+        <nav aria-label="Hauptnavigation">
+            <ul>
+                <li><a href="Formularelemente.html">Formularelemente</a></li>
+                <li><a href="Tables.html" aria-current="page">Tabellen</a></li>
+                <li><a href="Listen.html">Listen</a></li>
+                <li><a href="Grafiken.html">Grafiken</a></li>
+                <li><a href="LinksButtons.html">Links und Buttons</a></li>
+                <li><a href="Text.html">Text</a></li>
+                <li><a href="Akkordeon.html">Akkordeon</a></li>
+                <li><a href="karousell.html">Karussell</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Beispiele von Tabellen</h1>
+        <p>Die folgenden Tabellen sollen zeigen, wie Nutzer von Screenreadern Tabellen <strong>mit und ohne</strong>
+            geeignetem Markup wahrnehmen können.</p>
+        <h2>Beispiele korrekt ausgezeichneter Tabellen</h2>
+        <table>
+            <caption class="tablecapt">Fußball-Vereine mit headers und id</caption>
+            <thead>
+                <tr>
+                    <th id="verein" rowspan="2" title="V">Verein</th>
+                    <th id="standort" colspan="4">Standort</th>
+                </tr>
+                <tr>
+                    <th id="kontinent"><abbr title="Teil der Welt"></abbr>Kontinent</th>
+                    <th id="land">Land</th>
+                    <th id="stadt">Stadt</th>
+                    <th id="stadion">Stadion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td headers="verein">FC Bayern München</td>
+                    <td headers="standort kontinent">Europa</td>
+                    <td headers="standort land">Deutschland</td>
+                    <td headers="standort stadt">München</td>
+                    <td headers="standort stadion">Allianz-Arena</td>
+                </tr>
+                <tr>
+                    <td headers="verein" id="sechzig">TSV 1860 München</td>
+                    <td headers="standort kontinent">Europa</td>
+                    <td headers="standort land">Deutschland</td>
+                    <td headers="standort stadt">München</td>
+                    <td headers="standort stadion">Stadion an der Grünwalder Straße</td>
+                </tr>
+                <tr>
+                    <td headers="verein" id="liverpool" lang="en">FC Liverpool</td>
+                    <td headers="standort kontinent">Europa</td>
+                    <td headers="standort land">England</td>
+                    <td headers="standort stadt" lang="en">Liverpool</td>
+                    <td headers="standort stadion" lang="en">Anfield Road</td>
+                </tr>
+            </tbody>
+        </table>
+        </br>
+
+        <table>
+            <caption>einfache Tabelle mit geeignetem Markup Fußball-Vereine</caption>
+            <thead>
+                <tr>
+                    <th>Verein</th>
+                    <th>Kontinent</th>
+                    <th>Land</th>
+                    <th>Stadt</th>
+                    <th>Stadion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>FC Bayern München</td>
+                    <td>Europa</td>
+                    <td>Deutschland</td>
+                    <td>München</td>
+                    <td>Allianz-Arena</td>
+                </tr>
+                <tr>
+                    <td>TSV 1860 München</td>
+                    <td>Europa</td>
+                    <td>Deutschland</td>
+                    <td>München</td>
+                    <td>Stadion an der Grünwalder Straße</td>
+                </tr>
+                <tr>
+                    <td lang="en">FC Liverpool</td>
+                    <td>Europa</td>
+                    <td>England</td>
+                    <td lang="en">Liverpool</td>
+                    <td lang="en">Anfield Road</td>
+                </tr>
+            </tbody>
+        </table>
+        </br>
+
+        <table>
+            <caption>einfache Tabelle mit Zeilenüberschriften Fußball-Vereine</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Verein</th>
+                    <th scope="col">Kontinent</th>
+                    <th scope="col">Land</th>
+                    <th scope="col">Stadt</th>
+                    <th scope="col">Stadion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">FC Bayern München</th>
+                    <td>Europa</td>
+                    <td>Deutschland</td>
+                    <td>München</td>
+                    <td>Allianz-Arena</td>
+                </tr>
+                <tr>
+                    <th scope="row">TSV 1860 München</th>
+                    <td>Europa</td>
+                    <td>Deutschland</td>
+                    <td>München</td>
+                    <td>Stadion an der Grünwalder Straße</td>
+                </tr>
+                <tr>
+                    <th lang="en" scope="row">FC Liverpool</th>
+                    <td>Europa</td>
+                    <td>England</td>
+                    <td lang="en">Liverpool</td>
+                    <td lang="en">Anfield Road</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>einfache Tabelle ohne geeignetem Markup</h2>
+        <table>
+            <tr>
+                <td>Verein</td>
+                <td>Kontinent</abbr></td>
+                <td>Land</td>
+                <td>Stadt</td>
+                <td>Stadion</td>
+            </tr>
+            <tr>
+                <td>FC Bayern München</td>
+                <td>Europa</td>
+                <td>Deutschland</td>
+                <td>München</td>
+                <td>Allianz-Arena</td>
+            </tr>
+            <tr>
+                <td>TSV 1860 München</td>
+                <td>Europa</td>
+                <td>Deutschland</td>
+                <td>München</td>
+                <td>Stadion an der Grünwalder Straße</td>
+            </tr>
+            <tr>
+                <td lang="en">FC Liverpool</td>
+                <td>Europa</td>
+                <td>England</td>
+                <td lang="en">Liverpool</td>
+                <td lang="en">Anfield Road</td>
+            </tr>
+        </table>
+        </br>
+        <h2>einfache Tabelle mit WAI-ARIA</h2>
+        <div role="table" aria-label="Fußball-Vereine" aria-describedby="students_table_desc">
+            <div id="students_table_desc">
+                Diese Tabelle mit Fußballvereinen ist mit WAI-ARIA umgesetzt
+            </div>
+            <div role="rowgroup">
+                <div id="ariath" role="row">
+                    <span role="columnheader">
+                        Verein
+                    </span>
+                    <span role="columnheader">
+                        Kontinent
+                    </span>
+                    <span role="columnheader">
+                        Land
+                    </span>
+                    <span role="columnheader">
+                        Stadt
+                    </span>
+                    <span role="columnheader">
+                        Stadion
+                    </span>
+                </div>
+            </div>
+            <div role="rowgroup">
+                <div role="row">
+                    <span role="cell">
+                        FC Bayern München
+                    </span>
+                    <span role="cell">
+                        Europa
+                    </span>
+                    <span role="cell">
+                        Deutschland
+                    </span>
+                    <span role="cell">
+                        München
+                    </span>
+                    <span role="cell">
+                        Allianz-Arena
+                    </span>
+                </div>
+                <div role="row">
+                    <span role="cell">
+                        TSV 1860 München
+                    </span>
+                    <span role="cell">
+                        Europa
+                    </span>
+                    <span role="cell">
+                        Deutschland
+                    </span>
+                    <span role="cell">
+                        München
+                    </span>
+                    <span role="cell">
+                        Stadion an der Grünwalder Straße
+                    </span>
+                </div>
+                <div role="row">
+                    <span role="cell" lang="en">
+                        FC Liverpool
+                    </span>
+                    <span role="cell">
+                        Europa
+                    </span>
+                    <span role="cell">
+                        England
+                    </span>
+                    <span role="cell" lang="en">
+                        Liverpool
+                    </span>
+                    <span role="cell" lang="en">
+                        Anfield Road
+                    </span>
+                </div>
+            </div>
+        </div>
+        <footer>Stiftung Pfennigparade 2024</footer>
+    </main>
+
+</html>
