@@ -15,7 +15,7 @@ div[aria-level="2"] {
 	font-weight: bold;
 }
 
-nav {
+header {
 	color: white;
 	background-color: rgb(0, 130, 124);
 	text-align: center;
@@ -47,7 +47,9 @@ footer,
 	margin-top: 1.5%;
 }
 
-
+p{
+	margin-left:1.2%;
+}
 nav li {
 	display: inline-block;
 	margin: 6px;
@@ -72,7 +74,7 @@ nav a {
 	background-color: rgb(0, 130, 124);
 }
 
-nav a:focus-visible, nav a:hover {
+nav a:focus, nav a:hover {
 	color: white;
 	background-color: rgb(0, 130, 124);
 	outline: 3.6px solid white;
@@ -81,36 +83,111 @@ nav a:focus-visible, nav a:hover {
 	text-decoration: underline !important;
 }
 
+fieldset {
+	width: 45%;
+}
 
 h1 {
 	font-size: 1.8em;
 }
 
-h2 {
+h2,
+[aria-level="2"] {
+	margin-top: 2em;
 	font-size: 1.5em;
 	word-wrap: break-word;
 }
 
+
+legend {
+	margin-bottom: 24px;
+	font-size: 1.25em
+}
+
+
+label {
+	margin-bottom: 6px;
+	display: block;
+	padding-bottom: 4.5px;
+}
+
+form div {
+	margin-bottom: 30px;
+}
+
+input {
+	font-size: 1.2em;
+	max-width: 100%;
+}
+
+#inp2,
+#inp3 {
+	scroll-margin-top: 50px;
+}
+
+select {
+	font-size: 1.2em;
+	max-width: 100%;
+}
+
+
+
+input:focus, input:hover{
+	background-color: white;
+	color: black;
+	border-left: 15px solid darkblue;
+}
+
+
+
+select:focus , select:hover{
+	border-left: 15px solid darkblue;
+	background-color: white;
+	color: black;
+}
 
 a {
 	color: darkblue;
 	background-color: white;
 }
 
-a:visited:not(nav a) {
+a:visited {
 	color: darkgreen;
 	background-color: white;
 
 }
 
 
-a:focus {
+a:focus, a:hover {
 	outline: 3.6px solid darkblue;
 	font-weight: bold;
 	font-weight: bold;
 	background-color: white;
 	text-decoration: underline !important;
 }
+
+
+#flexcont img {
+	width: 600px;
+}
+
+#logoimg {
+	width: 480px;
+}
+
+
+.rdb {
+	height: 1.2em;
+	width: 1.2em;
+}
+
+.inlinelabel {
+	display: inline-block;
+
+}
+
+
+
 
 button:not(#star, .btn) {
 	height: 39px;
@@ -127,8 +204,16 @@ button:not(#star, .btn) {
 
 
 
+
+[type="checkbox"] {
+	height: 1em;
+	width: 1em;
+}
+
+
 [type="button"]:focus,
-button:focus {
+button:focus, [type="button"]:hover,
+button:hover {
 	height: 39px;
 	width: auto;
 	padding: 6px;
@@ -140,26 +225,36 @@ button:focus {
 	background-color: white;
 }
 
-[type="date"]:focus {
+[type="date"]:focus, [type="date"]:hover  {
 	text-decoration: underline;
 	color: black;
 	background-color: white;
 	border-left: 12px solid darkblue;
 }
 
+
+[type="checkbox"]:focus,
+[type="radio"]:focus, [type="checkbox"]:hover,
+[type="radio"]:hover {
+	height: 1em;
+	width: 1em;
+	outline-offset: 2.4px;
+	outline: 4.2px solid darkblue;
+	color: black;
+	background-color: white;
+}
+
+#textlink {
+	text-decoration: none;
+	color: black;
+}
+
+
 #headerlogo {
 	float: left;
 	height: 81px;
 	margin-top: 18.5px;
 	margin-left: 18.5px;
-}
-
-#errcont {
-	color: white;
-	background-color: darkred;
-	width: 30em;
-	max-width: 96%;
-	border-radius: 6px;
 }
 
 
@@ -182,14 +277,4 @@ button:focus {
 		text-align: center;
 		background-color: rgb(0, 130, 124);
 	}
-}
-
-@media only screen and (max-width: 480px) {
-	.carousel-caption {
-		line-height: 1.2em;
-		font-size: 0.6em;
-
-	}
-
-}
 }

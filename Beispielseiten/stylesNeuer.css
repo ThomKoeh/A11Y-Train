@@ -72,11 +72,10 @@ nav a {
 	background-color: rgb(0, 130, 124);
 }
 
-nav a:focus {
-	color: white;
-	background-color: rgb(0, 130, 124);
+nav a:focus-visible, nav a:hover {
+	color: white !important;
+	background-color: rgb(0, 130, 124) !important;
 	outline: 3.6px solid white;
-	font-weight: bold;
 	font-weight: bold;
 	text-decoration: underline !important;
 }
@@ -130,7 +129,7 @@ select {
 
 
 
-input:focus {
+input:focus, input:hover{
 	background-color: white;
 	color: black;
 	border-left: 15px solid darkblue;
@@ -138,7 +137,7 @@ input:focus {
 
 
 
-select:focus {
+select:focus , select:hover{
 	border-left: 15px solid darkblue;
 	background-color: white;
 	color: black;
@@ -149,14 +148,14 @@ a {
 	background-color: white;
 }
 
-a:visited {
+a:visited:not(nav a) {
 	color: darkgreen;
 	background-color: white;
 
 }
 
 
-a:focus {
+a:focus, a:hover {
 	outline: 3.6px solid darkblue;
 	font-weight: bold;
 	font-weight: bold;
@@ -164,6 +163,13 @@ a:focus {
 	text-decoration: underline !important;
 }
 
+img:focus-visible{
+	outline: 3.6px solid darkblue;
+	font-weight: bold;
+	font-weight: bold;
+	background-color: white;
+	text-decoration: underline !important;
+}
 
 #flexcont img {
 	width: 600px;
@@ -234,7 +240,8 @@ button:not(#star, .btn) {
 
 
 [type="button"]:focus,
-button:focus {
+button:focus, [type="button"]:hover,
+button:hover {
 	height: 39px;
 	width: auto;
 	padding: 6px;
@@ -246,7 +253,7 @@ button:focus {
 	background-color: white;
 }
 
-[type="date"]:focus {
+[type="date"]:focus, [type="date"]:hover  {
 	text-decoration: underline;
 	color: black;
 	background-color: white;
@@ -255,7 +262,8 @@ button:focus {
 
 
 [type="checkbox"]:focus,
-[type="radio"]:focus {
+[type="radio"]:focus, [type="checkbox"]:hover,
+[type="radio"]:hover {
 	height: 1em;
 	width: 1em;
 	outline-offset: 2.4px;

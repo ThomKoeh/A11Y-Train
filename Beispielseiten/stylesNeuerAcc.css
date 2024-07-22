@@ -190,9 +190,10 @@ nav a {
 	background-color: rgb(0, 130, 124);
 }
 
-nav a:focus {
+nav a:focus-visible, nav a:hover {
+	color: white !important;
+	background-color: rgb(0, 130, 124) !important;
 	outline: 3.6px solid white;
-	font-weight: bold;
 	font-weight: bold;
 	text-decoration: underline !important;
 }
@@ -249,7 +250,7 @@ a {
 	background-color: white;
 }
 
-a:visited {
+a:visited:not(nav a){
 	color: darkgreen;
 	background-color: white;
 
