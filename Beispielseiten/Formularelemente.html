@@ -7,9 +7,11 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="stylesNeuer.css">
 </head>
+
 <body>
 	<script src="tk.js" async></script>
-		<header tabindex="-1" id="hd">
+	<header tabindex="-1" id="hd">
+		<img id="balken" src="balken.png" alt="">
 		<img height="60" id="headerlogo" src="LogoPP.png"
 			alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
 		<nav aria-label="Hauptnavigation">
@@ -35,7 +37,8 @@
 			<form aria-labelledby="formlbl">
 				<h2 id="formlbl">Formularelemente</h2>
 				<div id="formular">
-					<p id="pfdesc">Alle mit * gekennzeichneten Felder sind Pflichtfelder.</p>
+					<p id="pfdesc">Alle mit <span class="asterisk"><strong>*</strong></span> gekennzeichneten Felder
+						sind Pflichtfelder.</p>
 					<div id="errcont" aria-live="assertive" aria-atomic="true" tabindex="-1"></div>
 					<div>
 						<label for="inp1">Vorname</label>
@@ -45,14 +48,15 @@
 					</div>
 
 					<div id="anker2">
-						<label id="lbl2" for="inp2">E-Mail*</label>
+						<label id="lbl2" for="inp2">E-Mail<span class="asterisk"><strong>*</strong></span></label>
 						<input type="email" autocomplete="email" class="pflicht" id="inp2" aria-required="true">
 						<p id="erm">Fehler: Bitte füllen Sie das Feld E-Mail aus.</p>
 					</div>
 
 					<div id="anker3">
-						<label id="lbl3" for="inp3">Passwort*</label>
-						<input type="password" id="inp3" autocomplete="new-password" class="pflicht" aria-required="true">
+						<label id="lbl3" for="inp3">Passwort<span class="asterisk"><strong>*</strong></span></label>
+						<input type="password" id="inp3" autocomplete="new-password" class="pflicht"
+							aria-required="true">
 						<p id="erp">Fehler: Bitte geben Sie ein Passwort ein.</p>
 					</div>
 				</div>
@@ -78,7 +82,7 @@
 				</div>
 
 				<div lang="en-us" role="radiogroup" aria-labelledby="group_label_1" id="rg1">
-					<h3  id="group_label_1">Pizza Crust</h3>
+					<h3 id="group_label_1">Pizza Crust</h3>
 					<div role="radio" aria-checked="false" tabindex="0"> Regular crust</div>
 					<div role="radio" aria-checked="false" tabindex="-1"> Deep dish</div>
 					<div role="radio" aria-checked="false" tabindex="-1"> Thin crust</div>
@@ -372,7 +376,9 @@
 			</form>
 		</main>
 	</div>
-	<footer>Stiftung Pfennigparade 2024</footer>
+	<footer>
+		<p>Stiftung Pfennigparade 2024</p>
+	</footer>
 </body>
 
 </html>

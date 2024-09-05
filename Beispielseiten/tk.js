@@ -67,14 +67,14 @@ function favorit() {
 	document.getElementById("star").setAttribute("aria-pressed", pr);
 	if (pr == true) {
 		document.getElementById("rate").setAttribute("src", "StarFilled.svg");
-		document.getElementById("favorit").innerHTML = "Die Seite der Pfennigparade ist als Favorit gesetzt.";
+   	document.getElementById("favorit").innerHTML = "Die Seite der Pfennigparade ist als Favorit gesetzt.";
 		clearTimeout(zeit);
 		zeit = setTimeout(statusleer, 12000);
 
 	}
 	if (pr == false) {
 		document.getElementById("rate").setAttribute("src", "Star.svg");
-		document.getElementById("favorit").innerHTML = "Die Seite der Pfennigparade wurde aus den Favoriten entfernt.";
+    document.getElementById("favorit").innerHTML = "Die Seite der Pfennigparade wurde aus den Favoriten entfernt.";
 		clearTimeout(zeit);
 		zeit = setTimeout(statusleer, 12000);
 	}

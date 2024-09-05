@@ -17,20 +17,36 @@ div[aria-level="2"] {
 
 nav {
 	color: white;
-	background-color: rgb(0, 130, 124);
 	text-align: center;
+	background-image: linear-gradient(rgb(0, 130, 124) 78%, snow);
 	width: 100%;
-	height: 120px;
-	line-height: 120px;
+	height: 150px;
+	line-height: 150px;
+	margin-top: 0px;
+}
+
+[aria-current="page"] {
+	font-weight: bold;
+}
+
+#balken {
+	width: 100%;
+	margin-bottom: 0px;
 }
 
 header {
+	background-color: rgb(0, 130, 124);
 	margin-bottom: 6%;
 }
 
 main {
-	margin-left: 45px;
-	margin-right: 45px;
+	margin-left: 150px;
+	margin-right: 150px;
+}
+
+.asterisk {
+	color: darkred;
+	background-color: snow;
 }
 
 section {
@@ -41,10 +57,11 @@ footer,
 [role="contentinfo"] {
 	bottom: 3px;
 	text-align: center;
-	line-height: 42px;
+	height: 90px;
+	line-height: 90px;
 	color: white;
 	background-color: rgb(0, 130, 124);
-	margin-top: 1.5%;
+	margin-top: 3%;
 }
 
 
@@ -54,6 +71,7 @@ nav li {
 }
 
 nav ul {
+	margin-top: 0px;
 	padding-left: 0px;
 }
 
@@ -72,7 +90,8 @@ nav a {
 	background-color: rgb(0, 130, 124);
 }
 
-nav a:focus-visible, nav a:hover {
+nav a:focus-visible,
+nav a:hover {
 	color: white !important;
 	background-color: rgb(0, 130, 124) !important;
 	outline: 3.6px solid white;
@@ -81,7 +100,7 @@ nav a:focus-visible, nav a:hover {
 }
 
 fieldset {
-	width: 45%;
+	width: auto;
 }
 
 h1 {
@@ -129,7 +148,8 @@ select {
 
 
 
-input:focus, input:hover{
+input:focus,
+input:hover {
 	background-color: white;
 	color: black;
 	border-left: 15px solid darkblue;
@@ -137,7 +157,8 @@ input:focus, input:hover{
 
 
 
-select:focus , select:hover{
+select:focus,
+select:hover {
 	border-left: 15px solid darkblue;
 	background-color: white;
 	color: black;
@@ -155,7 +176,8 @@ a:visited:not(nav a) {
 }
 
 
-a:focus, a:hover {
+a:focus,
+a:hover {
 	outline: 3.6px solid darkblue;
 	font-weight: bold;
 	font-weight: bold;
@@ -163,7 +185,7 @@ a:focus, a:hover {
 	text-decoration: underline !important;
 }
 
-img:focus-visible{
+img:focus-visible {
 	outline: 3.6px solid darkblue;
 	font-weight: bold;
 	font-weight: bold;
@@ -172,13 +194,31 @@ img:focus-visible{
 }
 
 #flexcont img {
+	border-radius: 15px;
 	width: 600px;
 }
 
+#qualle {
+	box-shadow: 0px 0px 24px rgb(94, 154, 206);
+}
+
+#tree {
+	box-shadow: 0px 0px 24px rgb(240, 138, 1);
+}
+
+#wand {
+	box-shadow: 0px 0px 24px rgb(210, 38, 28);
+}
+
 #logoimg {
+	box-shadow: 0px 0px 24px rgb(188, 200, 38);
 	width: 480px;
 }
 
+#logocont a:focus {
+	outline: 6px solid darkblue;
+	outline-offset: 18px;
+}
 
 .rdb {
 	height: 1.2em;
@@ -207,6 +247,16 @@ button:not(#star, .btn) {
 }
 
 
+#graphcont {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 15px;
+}
+
+#logoPP {
+	max-width: 96%;
+}
 
 #star {
 	color: black;
@@ -227,9 +277,8 @@ button:not(#star, .btn) {
 	font-size: 1.1em;
 	border-radius: 9px;
 	margin-top: 24px;
-	width: 30em;
+	width: 24em;
 	max-width: 96%;
-
 }
 
 
@@ -240,7 +289,8 @@ button:not(#star, .btn) {
 
 
 [type="button"]:focus,
-button:focus, [type="button"]:hover,
+button:focus,
+[type="button"]:hover,
 button:hover {
 	height: 39px;
 	width: auto;
@@ -253,7 +303,8 @@ button:hover {
 	background-color: white;
 }
 
-[type="date"]:focus, [type="date"]:hover  {
+[type="date"]:focus,
+[type="date"]:hover {
 	text-decoration: underline;
 	color: black;
 	background-color: white;
@@ -262,7 +313,8 @@ button:hover {
 
 
 [type="checkbox"]:focus,
-[type="radio"]:focus, [type="checkbox"]:hover,
+[type="radio"]:focus,
+[type="checkbox"]:hover,
 [type="radio"]:hover {
 	height: 1em;
 	width: 1em;
@@ -321,17 +373,17 @@ button:hover {
 	background-color: white;
 }
 
-#anker2 p{
+#anker2 p {
 	display: none;
-	font-size:0.9em;
+	font-size: 0.9em;
 	color: darkred;
 	margin-top: 3px;
 
 }
 
-#anker3 p{
+#anker3 p {
 	display: none;
-	font-size:0.9em;
+	font-size: 0.9em;
 	color: darkred;
 	margin-top: 3px;
 }
@@ -352,7 +404,8 @@ table td {
 
 table th {
 	border: 3.6px solid black;
-	background-color: lightcoral !important;
+	background-color: #DAEDEA !important;
+	color: black;
 }
 
 table tr:nth-child(even) {
@@ -366,7 +419,7 @@ table tr:nth-child(even) {
 [role="table"]>div[id] {
 	display: table-caption;
 	font-style: italic;
-	text-align:center;
+	text-align: center;
 }
 
 [role="table"] [role="row"] {
@@ -389,9 +442,10 @@ table tr:nth-child(even) {
 	background-color: #F0FFFF;
 }
 
-#ariath{
-	background-color: #F08080 !important;
-} 
+#ariath {
+	background-color: #DAEDEA !important;
+	color: black !important;
+}
 
 #flexcont {
 	display: flex;
@@ -413,11 +467,14 @@ table tr:nth-child(even) {
 
 #backgroundimg {
 	background-image: url("Trollstigen1.jpg");
-	background-repeat: round;
+	background-repeat: no-repeat;
 	text-align: center;
 	height: 606.96px;
 	width: 1519.44px;
-	margin: auto;
+	max-width: 100%;
+	background-size: contain;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .sr-only {
@@ -435,13 +492,13 @@ table tr:nth-child(even) {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-  }
-  
-  [role="radiogroup"]:focus {
+}
+
+[role="radiogroup"]:focus {
 	outline: none;
-  }
-  
-  [role="radio"] {
+}
+
+[role="radio"] {
 	padding: 4px 8px;
 	border: 0 solid transparent;
 	border-radius: 5px;
@@ -450,33 +507,33 @@ table tr:nth-child(even) {
 	cursor: default;
 	outline: none;
 	color: black;
-  }
-  
-  [role="radio"] + [role="radio"] {
+}
+
+[role="radio"]+[role="radio"] {
 	margin-left: 1em;
-  }
-  
-  [role="radio"]::before {
+}
+
+[role="radio"]::before {
 	position: relative;
 	top: 1px;
 	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='14' width='14' style='forced-color-adjust: auto;'%3E%3Ccircle cx='7' cy='7' r='6' stroke='rgb(0, 90, 156)' stroke-width='2' fill-opacity='0' /%3E%3C/svg%3E");
-  }
-  
-  [role="radio"][aria-checked="true"]::before {
+}
+
+[role="radio"][aria-checked="true"]::before {
 	position: relative;
 	top: 1px;
 	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='14' width='14' style='forced-color-adjust: auto;'%3E%3Ccircle cx='7' cy='7' r='6' stroke='rgb(0, 90, 156)' stroke-width='2' fill-opacity='0' /%3E%3Ccircle cx='7' cy='7' r='3' fill='rgb(0, 90, 156)' stroke-opacity='0' /%3E%3C/svg%3E");
-  }
-  
-  [role="radio"].focus,
-  [role="radio"]:hover {
+}
+
+[role="radio"].focus,
+[role="radio"]:hover {
 	padding: 2px 6px;
 	border: 2px solid #005a9c;
 	background-color: #def;
 	cursor: pointer;
-  }
-  
-  
+}
+
+
 
 @media only screen and (max-width: 1200px) {
 	nav {
@@ -484,7 +541,9 @@ table tr:nth-child(even) {
 		display: block;
 		height: 100%;
 		width: 100%;
+		padding-bottom: 30px;
 	}
+
 
 	#headerlogo {
 		margin-top: 30px;
@@ -494,5 +553,36 @@ table tr:nth-child(even) {
 	header {
 		text-align: center;
 		background-color: rgb(0, 130, 124);
+	}
+
+	main {
+		margin-left: 15px;
+		margin-right: 1px;
+
+	}
+
+	.flexitem {
+		word-wrap: break-word;
+		width: 81%;
+		margin-top: 45px;
+	}
+
+	.flexitem img {
+		width: 100% !important;
+	}
+
+	#backgroundimg {
+		background-size: contain !important;
+		text-align: center;
+		max-width: 96% !important;
+	}
+
+	footer {
+		height: auto;
+	}
+
+	footer p {
+		margin-left: 12%;
+		margin-right: 12%;
 	}
 }

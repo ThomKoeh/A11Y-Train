@@ -10,6 +10,7 @@
 
 <body>
     <header tabindex="-1" id="hd">
+        <img id="balken" src="balken.png" alt="">
         <img height="60" id="headerlogo" src="LogoPP.png"
             alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
         <nav id="navi" aria-label="Hauptnavigation">
@@ -50,16 +51,18 @@
                 title="zu unserer Seite">zur Seite Digitale Barrierefreiheit der Stiftung Pfennigparade</a>
             <h3>Link zu PDF</h3>
             <p id="desctest">Nach dem Betätigen des Links öffnet sich das PDF im Browser. Dieser Absatz ist mit
-                <code>aria-describedby</code> mit dem nachfolgenden Link verknüpft.</p>
+                <code>aria-describedby</code> mit dem nachfolgenden Link verknüpft.
+            </p>
             <a href="Test_PDF.pdf" aria-describedby="desctest">zum Test-PDF</a>
 
             <h2>Rein grafischer Link und Button zum Favorit setzen</h2>
             <p>Der Folgende grafische Link beinhaltet ein <code>alt</code>-Attribut, welches das Linkziel beschreibt.
                 Der Button zum Favorit speichern weist das <code>aria-pressed</code>-Attribut auf.</p>
             <div id="graphcont">
-                <a href="https://www.digitale-barrierefreiheit.de"><img src="LogoPP.png" width="300"
+                <a  href="https://www.digitale-barrierefreiheit.de"><img id="logoPP" src="LogoPP.png" width="300"
                         alt="zur Seite Digitale Barrierefreiheit der Stiftung Pfennigparade - Die Zukunft zählt auf uns."></a>
-                <button id="star" aria-pressed="false" onclick="favorit()" title="Die Seite der Pfennigparade als Favorit speichern"><img
+                <button id="star" aria-pressed="false" onclick="favorit()"
+                    title="Die Seite der Pfennigparade als Favorit speichern"><img
                         alt="Die Seite der Pfennigparade als Favorit speichern" id="rate" width="48" height="48"
                         src="star.svg">
                 </button>
@@ -71,13 +74,16 @@
             <div>
                 <h2>Vorsicht Tastaturfalle!</h2>
                 <a href="#rettung" aria-describedby="falledesc">zum Überwinden der Tastaturfalle folge diesem Link!</a>
-                <p id="falledesc">Beim Erreichen des nächsten Button gelangst Du bei der Benutzung in eine Tastaturfalle!
+                <p id="falledesc">Beim Erreichen des nächsten Button gelangst Du bei der Benutzung in eine
+                    Tastaturfalle!
                     Wenn Du gefangen bist musst Du Strg+Pos1 drücken und die Seite neu laden.</p>
                 <button id="falle" onblur="caught()">Hier kommst Du nicht mehr weg!</button>
         </section>
         <a id="rettung" href="#navi">Zum Seitenanfang</a>
     </main>
-    <footer>Stiftung Pfennigparade 2024</footer>
+    <footer>
+        <p>Stiftung Pfennigparade 2024</p>
+    </footer>
     <script src="tk.js"></script>
 </body>
 

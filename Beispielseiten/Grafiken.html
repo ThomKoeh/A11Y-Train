@@ -13,6 +13,7 @@
 
 <body>
     <header tabindex="-1" id="hd">
+        <img id="balken" src="balken.png" alt="">
         <img height="60" id="headerlogo" src="LogoPP.png"
             alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
         <nav aria-label="Hauptnavigation">
@@ -35,20 +36,29 @@
         <div id="flexcont">
             <div class="flexitem">
                 <h2>Grafik mit korrektem <code>alt</code>-Attribut</h2>
-                <img src="qualle.jpg" alt="mehrere Ohrenquallen">
+                <div>
+                    <img id="qualle" src="qualle.jpg" alt="mehrere Ohrenquallen">
+                </div>
             </div>
             <div class="flexitem">
                 <h2>Grafik ohne <code>alt</code>-Attribut</h2>
-                <img src="tree.jpg">
+                <div>
+                    <img id="tree" src="tree.jpg">
+                </div>
             </div>
             <div class="flexitem">
                 <h2>Grafik mit leerem <code>alt</code>-Attribut</h2>
-                <img src="wall1.jpg" alt="">
+                <div>
+                    <img id="wand" src="wall1.jpg" alt="">
+                </div>
             </div>
-            <div class="flexitem">
+            <div id="logocont" class="flexitem">
                 <h2>verlinkte Grafik mit korrektem <code>alt</code>-Attribut</h2>
                 <a href="https://www.pfennigparade.de/">
-                    <img id="logoimg" src="LogoPP.png" alt="Zur Seite der Pfennigparade - Die Zukunft zählt auf uns.">
+                    <div>
+                        <img id="logoimg" src="LogoPP.png"
+                            alt="Zur Seite der Pfennigparade - Die Zukunft zählt auf uns.">
+                    </div>
                 </a>
             </div>
         </div>
@@ -61,7 +71,9 @@
             </div>
         </div>
     </main>
-    <footer>Stiftung Pfennigparade 2024</footer>
+    <footer>
+        <p>Stiftung Pfennigparade 2024</p>
+    </footer>
 </body>
 
 </html>
