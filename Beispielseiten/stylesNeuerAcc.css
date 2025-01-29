@@ -1,3 +1,5 @@
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
+
 .accordion {
 	margin: 0;
 	padding: 0;
@@ -75,7 +77,9 @@ button {
 }
 
 .accordion-trigger:focus .accordion-title {
-	border-color: hsl(216deg 94% 43%);
+	outline: 3px solid darkblue;
+	outline-offset: 0;
+	box-shadow: 0 0 0 5px #FFF;
 }
 
 .accordion-icon {
@@ -124,12 +128,11 @@ input {
 	width: 100%;
 }
 
-
+/* allgemeines Styling */
 html {
 	font-size: 1.2rem;
-	font-family: Arial, sans-serif;
+	font-family: 'FiraGO', sans-serif;
 	line-height: 1.5em;
-	scroll-behavior: smooth;
 	background-color: snow;
 }
 
@@ -144,16 +147,16 @@ nav {
 	background-image: linear-gradient(rgb(0, 130, 124) 78%, snow);
 	width: 100%;
 	height: 150px;
-	line-height: 150px;
-	margin-top:0px;
+	height: 120px;
+	margin-top: 42px;
 }
 
-[aria-current="page"]{
+[aria-current="page"] {
 	font-weight: bold;
-		}
-	
-#balken{
-	width:100%;
+}
+
+#balken {
+	width: 100%;
 	margin-bottom: 0px;
 }
 
@@ -163,15 +166,15 @@ header {
 }
 
 main {
-	margin-left: 150px;
-	margin-right: 150px;
+	margin-left: 12%;
+	margin-right: 12%;
 }
 
 footer,
 [role="contentinfo"] {
 	bottom: 3px;
 	text-align: center;
-	height:90px;
+	height: 90px;
 	line-height: 90px;
 	color: white;
 	background-color: rgb(0, 130, 124);
@@ -179,7 +182,7 @@ footer,
 }
 
 nav ul {
-	margin-top:0px;
+	margin-top: 0px;
 	padding-left: 0px;
 }
 
@@ -203,10 +206,13 @@ nav a {
 	background-color: rgb(0, 130, 124);
 }
 
-nav a:focus-visible, nav a:hover {
+nav a:focus-visible,
+nav a:hover {
 	color: white !important;
 	background-color: rgb(0, 130, 124) !important;
-	outline: 3.6px solid white;
+	outline: 3px solid white;
+	outline-offset: 0;
+	box-shadow: 0 0 0 6px #000;
 	font-weight: bold;
 	text-decoration: underline !important;
 }
@@ -263,7 +269,7 @@ a {
 	background-color: white;
 }
 
-a:visited:not(nav a){
+a:visited:not(nav a) {
 	color: darkgreen;
 	background-color: white;
 
@@ -290,9 +296,6 @@ a:focus {
 	color: black;
 }
 
-#ant {
-	background-image: url(aq.svg);
-}
 
 #headerlogo {
 	float: left;
@@ -300,13 +303,6 @@ a:focus {
 	margin-top: 18.5px;
 	margin-left: 18.5px;
 }
-
-.contimg {
-	float: left;
-	display: inline-block;
-	margin: 0px 15px 15px 0px;
-}
-
 
 
 @media only screen and (max-width: 1200px) {
@@ -316,7 +312,7 @@ a:focus {
 		height: 100%;
 		width: 100%;
 		padding-bottom: 30px;
-		}
+	}
 
 	#headerlogo {
 		margin-top: 30px;
@@ -328,15 +324,13 @@ a:focus {
 		vertical-align: middle;
 		background-color: rgb(0, 130, 124);
 	}
-	main{
-		margin-left:15px;
-		margin-right:1px;
-	
-	}
-	footer{
+
+
+	footer {
 		height: auto;
-			}
-	footer p{
+	}
+
+	footer p {
 		margin-left: 12%;
 		margin-right: 12%;
 	}

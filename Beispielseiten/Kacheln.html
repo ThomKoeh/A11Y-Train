@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Kacheln - Screenreaderausgaben</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesNeuer.css">
+</head>
+
+<body>
+    <header id="hd">
+        <img id="balken" src="Zusatzdateien/Balken.png" alt="">
+        <img height="60" id="headerlogo" src="Zusatzdateien/LogoPP.png"
+            alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
+        <nav role="navigation" aria-label="Haupt">
+            <ul>
+                <li><a href="Formularelemente.html">Formularelemente</a></li>
+                <li><a href="Tables.html">Tabellen</a></li>
+                <li><a href="Listen.html">Listen</a></li>
+                <li><a href="Grafiken.html">Grafiken</a></li>
+                <li><a href="LinksButtons.html">Links und Buttons</a></li>
+                <li><a href="Text.html">Text</a></li>
+                <li><a href="Akkordeon.html">Akkordeon</a></li>
+                <li><a href="karousell.html">Karussell</a></li>
+                <li><a href="Dialog.html">Dialoge</a></li>
+                <li><a href="Kacheln.html" aria-current="page">Kacheln</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Kacheln</h1>
+        <p>Diese Seite soll veranschaulichen, wie Kacheln gestaltet werden können, sodass sie für die Nutzenden gut
+            verständlich sind. Zudem werden hier auch Mausnutzende berücksichtigt, indem die Kacheln teilweise als
+            ganzes
+            anklickbar sind.</p>
+        <ul id="cardcont" aria-label="Beispielkacheln">
+            <li class="carditem cardall">
+                <a href="https://www.digitale-barrierefreiheit.de">
+                    <img src="Zusatzdateien/LogoPP.png" alt="">
+                    <h3>Pfennigparade - Beispiel 1</h3>
+                    <p>Hier ist die ganze Kachel verlinkt. Dies führt dazu, dass der Screenreader auch alles vorliest.
+                        Das kann gegebenenfalls für die Nutzenden verwirrend sein. In der Elementliste des
+                        Screenreaders wird der ganze Text angezeigt. Dennoch wird dies oft verwendet, um die ganze
+                        Fläche anklickbar zu gestalten.</p>
+                    <small>von Business Inklusiv</small>
+                </a>
+            </li>
+            <li class="carditem2">
+                <img src="Zusatzdateien/LogoPP.png" alt="">
+                <h3><a href="https://www.digitale-barrierefreiheit.de">Pfennigparade - Beispiel 2</a></h3>
+                <p>Hier ist nur die Überschrift verlinkt. Ohne weitere Implementierung wird auch nur diese bei
+                    Maus-Hover bzw. Tastaturfokus hervorgehoben. Es ist auch nur die verlinkte Überschrift mit der Maus anklickbar.</p>
+                <small>von Business Inklusiv</small>
+            </li>
+            <li class="carditem">
+                <img src="Zusatzdateien/LogoPP.png" alt="">
+                <h3><a href="https://www.digitale-barrierefreiheit.de">Pfennigparade - Beispiel 3</a></h3>
+                <p>Hier ist nur die Überschrift verlinkt, und nur diese wird vom Screenreader bei Fokussierung ausgegeben. Dennoch ist die ganze Kachel anklickbar und wird auch auf
+                    einmal fokusiert. Dies wird über CSS mit Pseudo Content und <code>:focus-within</code> ermöglicht.</p>
+                <small>von Business Inklusiv</small>
+            </li>
+            <!--
+             <li class="carditem">
+                <img src="Zusatzdateien/LogoPP.png" alt="">
+                <h3><a href="https://www.digitale-barrierefreiheit.de">Die Stiftung Pfennigparade </a></h3>
+                <p>Das ist eine Beschreibung des Content. Er dient vorerst nur zu Testzwecken. Test,Test,</p>
+                <small>von Thomas K.</small>
+            </li>
+            <li class="carditem">
+                <img src="Zusatzdateien/LogoPP.png" alt="">
+                <h3><a href="https://www.digitale-barrierefreiheit.de">Die Stiftung Pfennigparade </a></h3>
+                <p>Das ist eine Beschreibung des Content. Er dient vorerst nur zu Testzwecken. Test,Test,</p>
+                <small>von Thomas K.</small>
+            </li>
+            -->
+        </ul>
+    </main>
+    <footer>
+        <p>Stiftung Pfennigparade 2024</p>
+    </footer>
+</body>
+
+</html>

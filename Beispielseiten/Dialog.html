@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title id="pgt">Dialoge - Screenreaderausgaben</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="stylesNeuer.css">
+</head>
+
+<body>
+    <header id="hd">
+        <img id="balken" src="Zusatzdateien/Balken.png" alt="">
+        <img height="60" id="headerlogo" src="Zusatzdateien/LogoPP.png"
+            alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
+        <nav role="navigation" aria-label="Haupt">
+            <ul>
+                <li><a href="Formularelemente.html">Formularelemente</a></li>
+                <li><a href="Tables.html">Tabellen</a></li>
+                <li><a href="Listen.html">Listen</a></li>
+                <li><a href="Grafiken.html">Grafiken</a></li>
+                <li><a href="LinksButtons.html">Links und Buttons</a></li>
+                <li><a href="Text.html">Text</a></li>
+                <li><a href="Akkordeon.html">Akkordeon</a></li>
+                <li><a href="karousell.html">Karussell</a></li>
+                <li><a href="Dialog.html" aria-current="page">Dialoge</a></li>
+                <li><a href="Kacheln.html">Kacheln</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="maincont">
+        <main>
+            <h1 id="ueschrift">Dialoge</h1>
+            <p>Diese Seite soll veranschaulichen, wie Nutzende von Screenreadern modale Dialoge wahrnehmen können und
+                diese gestaltet werden sollen.</p>
+            <h2>Beispiel eines modalen Dialogs</h2>
+            <p>Die nachfolgende Schaltfläche öffnet ein modales Dialogfeld. Es ist mit dem HTML
+                <code>dialog</code>-Element implementiert.
+            </p>
+            <button id="show-modal-dialog"  aria-haspopup="dialog" >Erklärung anzeigen</button>
+        </main>
+    </div>
+    <footer>
+        <p>Stiftung Pfennigparade 2024</p>
+    </footer>
+    <dialog id="dialog" aria-label="Anforderungen an modale Dialoge">
+        <button id="dialogicon" aria-label="Dialog schließen">X</button>
+        <h3 id="dialoglbl">Anforderungen</h3>
+        <p>Modale Dialoge sollen nicht mit der Tastatur bzw. dem Screenreader verlassen werden können, bevor sie
+            von den Nutzenden aktiv geschlossen werden.</p>
+        <p>Sonst kann es passieren, dass Nutzende, die auf Tastaturbedienung angewiesen sind, nicht mehr wissen,
+            wo sie sich gerade befinden.</p>
+        <p>Auch mit den Screenreader-Shortcuts und den Pfeiltasten dürfen sich im Hintergrund befindliche
+            Elemente nicht erreicht werden.</p>
+        <p>Nach dem Schließen des Dialogs mit Escape oder der entsprechenden Schaltfläche soll der Fokus wieder
+            auf das öffnende Element gesetzt werden.</p>
+        <input id="dialogcbx" type="checkbox"><label for="dialogcbx" class="inlinelabel">verstanden</label>
+        <br>
+        <button id="close-dialog">Dialog schließen</button>
+    </dialog>
+    <script src="dialog.js"></script>
+</body>
+
+</html>

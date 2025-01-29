@@ -6,17 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="stylesNeuer.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
 </head>
 
 <body>
-    <header tabindex="-1" id="hd">
-        <img id="balken" src="balken.png" alt="">
-        <img height="60" id="headerlogo" src="LogoPP.png"
+    <header id="hd">
+        <img id="balken" src="Zusatzdateien/Balken.png" alt="">
+        <img height="60" id="headerlogo" src="Zusatzdateien/LogoPP.png"
             alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
-        <nav aria-label="Hauptnavigation">
+        <nav role="navigation" role="navigation" aria-label="Haupt">
             <ul>
                 <li><a href="Formularelemente.html">Formularelemente</a></li>
                 <li><a href="Tables.html">Tabellen</a></li>
@@ -26,13 +23,16 @@
                 <li><a href="Text.html" aria-current="page">Text</a></li>
                 <li><a href="Akkordeon.html">Akkordeon</a></li>
                 <li><a href="karousell.html">Karussell</a></li>
+                <li><a href="Dialog.html">Dialoge</a></li>
+                <li><a href="Kacheln.html">Kacheln</a></li>
             </ul>
         </nav>
     </header>
     <div id="maincont">
         <main>
             <h1 id="ueschrift">Überschriften und Fließtext</h1>
-            <p>Diese Seite soll veranschaulichen, wie Nutzer von Screenreadern Überschriften und Text wahrnehmen können,
+            <p>Diese Seite soll veranschaulichen, wie Nutzende von Screenreadern Überschriften und Text wahrnehmen
+                können,
                 und wie Links im Fließtext gestaltet werden sollen.</p>
             <h2>Testabsatz mit Hervorhebungen</h2>
             <p>Prinzipiell sollten Hervorhebungen in Texten mit <code>strong</code> oder <code>em</code> gekennzeichnet
@@ -41,11 +41,12 @@
                 Hervorhebungen mit
                 <code>b</code> oder <code>i</code> können von assistiven Systemen nicht erkannt werden.
             </p>
-            <p>Absätze sollen stets mit dem <code>p</code>-Tag gekennzeichnet werden.</p>
+            <p>Absätze sollen stets mit dem <code>p</code>-Tag oder mit <code>div</code> gekennzeichnet werden.</p>
             <div role="heading" aria-level="2">Überschriften mit WAI-ARIA auszeichnen</div>
-            <p>Überschriften können auf Codeebene auch mit WAI-ARIA gekennzeichnet werden. Die dafür vorgesehenen
+            <div class="pdiv">Überschriften können auf Codeebene auch mit WAI-ARIA gekennzeichnet werden. Die dafür
+                vorgesehenen
                 Attribute sind <code>role="heading"</code> und <code>aria-level</code> mit dem entsprechenden Wert zu
-                Angabe der Ebene.</p>
+                Angabe der Ebene.</div>
             <p>Die vorangestellte Überschrift ist mit WAI-ARIA ausgezeichnet.</p>
             <div role="heading" aria-level="2">Links im Fließtext</div>
             <p>Links in Fließtexten sollen vom umgebenden Text unterscheidbar sein. Das sollte durch eine zusätzliche
@@ -71,14 +72,105 @@
                 pronunciation by the screenreader.</p>
 
             <h2>Zitate</h2>
-            Textabschnitte, die ein Zitat darstellen sollen auf Codeebene mit dem HTML-Element <code>blockquote</code>
-            ausgezeichnet werden. Korrekt ausgezeichnete Zitate können mit dem Screenreader angesprungen werden. Der
-            folgende Text stellt ein solches Zitat dar.
+            <p>Textabschnitte, die ein Zitat darstellen sollen auf Codeebene mit dem HTML-Element
+                <code>blockquote</code>
+                ausgezeichnet werden. Korrekt ausgezeichnete Zitate können mit dem Screenreader angesprungen werden. Der
+                folgende Text stellt ein solches Zitat dar.
+            </p>
             <blockquote>"Als Vergleich für den zugänglichen Namen kann man den Namen eines Menschen heranziehen. Man
                 sieht ihn nicht, bekommt ihn allerdings auf Anfrage gesagt, und der Mensch reagiert, wenn man ihn
                 nennt."
             </blockquote>
-        </main>
+            <h2>Formeln mit MathML</h2>
+            <p>Der folgende Abschnitt soll die Ausgabe von Formeln mit MathML unter Verwendung eines Screenreaders
+                darstellen.</p>
+            <h3>"einfache" Gleichung</h3>
+            <p>
+                <math tabindex="0" xmlns="http://www.w3.org/1998/Math/MathML">
+                    <mn>4</mn>
+                    <mo>&middot;</mo>
+                    <mi>x</mi>
+                    <mo>+</mo>
+                    <mn>4</mn>
+                    <mo>=</mo>
+                    <mo>(</mo>
+                    <mn>2</mn>
+                    <mo>+</mo>
+                    <mn>2</mn>
+                    <mo>)</mo>
+                    <mi>x</mi>
+                    <mo>+</mo>
+                    <mn>2</mn>
+                    <mo>&middot;</mo>
+                    <mn>2</mn>
+                </math>
+            </p>
+            <h3>Gleichung mit visuell verstecktem Multiplikationsoperator</h3>
+            <p>
+                <math tabindex="0" >
+                    <mi>E</mi>
+                    <mo>=</mo>
+                    <mi>m</mi>
+                    <mo>&InvisibleTimes;</mo>
+                    <msup>
+                        <mi>c</mi>
+                        <mrow>
+                            <mn>2</mn>
+                        </mrow>
+                    </msup>
+                </math>
+            </p>
+            <h3>Funktion mit Bruch</h3>
+            <p>
+                <math tabindex="0"  >
+                    <mi>y</mi>
+                    <mo>=</mo>
+                    <mfrac>
+                        <mrow>
+                            <mn>5</mn>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>x</mi>
+                            <mo>+</mo>
+                            <mn>2</mn>
+                        </mrow>
+                        <mrow>
+                            <mn>2</mn>
+                            <mo>&InvisibleTimes;</mo>
+                            <mi>y</mi>
+                        </mrow>
+                    </mfrac>
+                </math>
+            </p>
+            <h3>Quadratwurzel</h3>
+            <p>
+                <math tabindex="0" >
+                    <msqrt>
+                        <mn>4</mn>
+                    </msqrt>
+                    <mo>=</mo>
+                    <mn>2</mn>
+                </math>
+            </p>
+            <h3>Summen</h3>
+            <p>
+                <math tabindex="0" >
+                    <mrow displaystyle="true">
+                        <munderover>
+                            <mo>&sum;</mo>
+                            <mn>1</mn>
+                            <mn>2</mn>
+                        </munderover>
+                        <mfrac>
+                            <mn>1</mn>
+                            <mi>k</mi>
+                        </mfrac>
+                        <mo>=</mo>
+                        <mn>1,5</mn>
+                    </mrow>
+                </math>
+            </p>
+    </div>
+    </main>
     </div>
     <footer>
         <p>Stiftung Pfennigparade 2024</p>

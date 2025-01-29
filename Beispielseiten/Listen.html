@@ -6,17 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="stylesNeuer.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-
 </head>
 
 <body>
-    <header tabindex="-1" id="hd">
-        <img id="balken" src="balken.png" alt="">
-        <img height="60" id="headerlogo" src="LogoPP.png"
+    <header id="hd">
+        <img id="balken" src="Zusatzdateien/Balken.png" alt="">
+        <img height="60" id="headerlogo" src="Zusatzdateien/LogoPP.png"
             alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
-        <nav aria-label="Hauptnavigation">
+        <nav role="navigation" aria-label="Haupt">
             <ul>
                 <li><a href="Formularelemente.html">Formularelemente</a></li>
                 <li><a href="Tables.html">Tabellen</a></li>
@@ -26,13 +23,15 @@
                 <li><a href="Text.html">Text</a></li>
                 <li><a href="Akkordeon.html">Akkordeon</a></li>
                 <li><a href="karousell.html">Karussell</a></li>
+                <li><a href="Dialog.html">Dialoge</a></li>
+                <li><a href="Kacheln.html">Kacheln</a></li>
             </ul>
         </nav>
     </header>
     <div id="maincont">
         <main>
             <h1 id="ueschrift">Listen</h1>
-            <p>Diese Seite soll veranschaulichen, wie Nutzer von Screenreadern Listen wahrnehmen können</p>
+            <p>Diese Seite soll veranschaulichen, wie Nutzende von Screenreadern Listen wahrnehmen können.</p>
             <h2 id="listlabel1">Liste mit nativem HTML</h2>
             <p>Diese Liste ist mit reinem HTML umgesetzt. Hierfür wird ein <code>ul</code>-Element (ungeordnete Liste)
                 verwendet.</p>
@@ -71,6 +70,24 @@
                 <div role="listitem">- sechster Eintrag mit WAI-ARIA</div>
                 <div role="listitem">- siebter Eintrag mit WAI-ARIA</div>
             </div>
+            <h2 id="listlabel3">Definitionsliste mit Adressdaten in HTML</h2>
+            <p>Diese Definitionsliste ist mit HTML umgesetzt. Hierfür werden <code>dl</code>-,
+                <code>dt</code>- und <code>dd</code>-Elemente (für Definitionslisten)
+                verwendet.
+            </p>
+            <p>Der Screenreader NVDA unterstützt zum momentanen Zeitpunkt Definitionslisten im Chrome-Browser
+                <strong>nicht</strong>.
+            </p>
+            <dl aria-labelledby="listlabel3">
+                <dt>Straße und Hausnummer:</dt>
+                <dd>Schleißheimer Straße 282</dd>
+                <dt>Postleitzahl und Ort:</dt>
+                <dd>80809 München</dd>
+                <dt>Telefonnummer:</dt>
+                <dd>089/8393-0</dd>
+                <dt>Email-Adresse:</dt>
+                <dd>pp@example.com</dd>
+            </dl>
         </main>
     </div>
     <footer>

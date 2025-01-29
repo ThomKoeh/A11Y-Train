@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <header tabindex="-1" id="hd">
-        <img id="balken" src="balken.png" alt="">
-        <img height="60" id="headerlogo" src="LogoPP.png"
+    <header id="hd">
+        <img id="balken" src="Zusatzdateien/Balken.png" alt="">
+        <img height="60" id="headerlogo" src="Zusatzdateien/LogoPP.png"
             alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
-        <nav aria-label="Hauptnavigation">
+        <nav role="navigation" aria-label="Haupt">
             <ul>
                 <li><a href="Formularelemente.html">Formularelemente</a></li>
                 <li><a href="Tables.html" aria-current="page">Tabellen</a></li>
@@ -24,12 +24,14 @@
                 <li><a href="Text.html">Text</a></li>
                 <li><a href="Akkordeon.html">Akkordeon</a></li>
                 <li><a href="karousell.html">Karussell</a></li>
+                <li><a href="Dialog.html">Dialoge</a></li>
+                <li><a href="Kacheln.html">Kacheln</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <h1>Beispiele von Tabellen</h1>
-        <p>Die folgenden Tabellen sollen zeigen, wie Nutzer von Screenreadern Tabellen <strong>mit und ohne</strong>
+        <p>Die folgenden Tabellen sollen zeigen, wie Nutzende von Screenreadern Tabellen <strong>mit und ohne</strong>
             geeignetem Markup wahrnehmen können.</p>
         <h2>Beispiele korrekt ausgezeichneter Tabellen</h2>
         <table>
@@ -180,7 +182,7 @@
         <h2>einfache Tabelle mit WAI-ARIA</h2>
         <div role="table" aria-label="Fußball-Vereine" aria-describedby="students_table_desc">
             <div id="students_table_desc">
-                Diese Tabelle mit Fußballvereinen ist mit WAI-ARIA umgesetzt
+                Diese Tabelle mit Fußballvereinen ist mit WAI-ARIA umgesetzt.
             </div>
             <div role="rowgroup">
                 <div id="ariath" role="row">
@@ -255,9 +257,80 @@
                 </div>
             </div>
         </div>
+        </br>
+        <h2>sortierbare Tabelle mit geeignetem Markup</h2>
+        <div id="table-wrap">
+            <table class="sortable">
+                <caption>
+                    Sortierbare Tabelle mit Mitarbeitenden
+                    <span id="tablesort" aria-hidden="true" class="sr-only">Sortieren Sie, wie Sie möchten!</span>
+                </caption>
+                <thead>
+                    <tr>
+                        <th scope="colgroup">
+                            <button aria-describedby="tablesort">
+                                Vorname
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </th>
+                        <th aria-sort="ascending">
+                            <button aria-describedby="tablesort">
+                                Nachname
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </th>
+                        <th>
+                            <button aria-describedby="tablesort">
+                                Firma
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </th>
+                        <th class="no-sort">Adresse</th>
+                        <th class="num">
+                            <button aria-describedby="tablesort">
+                                Postleizahl
+                                <span aria-hidden="true"></span>
+                            </button>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Carsten</td>
+                        <td>Harms</td>
+                        <td>Stiftung Pfennigparade PSG GmbH</td>
+                        <td>Petuelring 108</td>
+                        <td class="num">80807</td>
+                    </tr>
+                    <tr>
+                        <td>Thomas</td>
+                        <td>Köhler</td>
+                        <td>Stiftung Pfennigparade SIGMETA GmbH</td>
+                        <td>Schleißheimer Str. 282</td>
+                        <td class="num">80809</td>
+                    </tr>
+                    <tr>
+                        <td>Ilber</td>
+                        <td>Lama</td>
+                        <td>Stiftung Pfennigparade SIGMETA GmbH</td>
+                        <td>Schleißheimer Str. 282</td>
+                        <td class="num">80809</td>
+                    </tr>
+                    <tr>
+                        <td>Silvia</td>
+                        <td>Stein</td>
+                        <td>Stiftung Pfennigparade PSG GmbH</td>
+                        <td>Petuelring 108</td>
+                        <td class="num">80807</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </main>
     <footer>
-        <p>Stiftung Pfennigparade 2024</p>
+        <p>Stiftung Pfennigparade 2024 - teilweise angelehnt an den ARIA Authoring Practices Guide (APG)</p>
     </footer>
+    <script src="tk.js"></script>
+</body>
 
 </html>

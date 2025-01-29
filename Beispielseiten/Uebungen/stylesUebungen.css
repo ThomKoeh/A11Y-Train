@@ -1,13 +1,12 @@
-@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
-
 html {
+	scroll-behavior: smooth;
 	background-color: snow;
 	color: black;
 }
 
 body {
 	font-size: 1.2rem;
-	font-family: 'FiraGO', sans-serif;
+	font-family: Arial, sans-serif;
 	line-height: 1.5em;
 }
 
@@ -16,59 +15,64 @@ div[aria-level="2"] {
 	font-weight: bold;
 }
 
+header {
+	background-color: rgb(0, 130, 124);
+	margin-bottom: 6%;
+}
+
+#balken {
+	width: 100%;
+	margin-bottom: 0px;
+}
+
 nav {
 	color: white;
 	text-align: center;
 	background-image: linear-gradient(rgb(0, 130, 124) 78%, snow);
 	width: 100%;
 	height: 150px;
-	height: 120px;
-	margin-top: 42px;
+	line-height: 150px;
+	margin-top: 0px;
 }
-
-[aria-current="page"]{
-	font-weight: bold;
-		}
-	
-
-#balken{
-	width:100%;
-	margin-bottom: 0px;
-}
-
 
 header {
-	background-color: rgb(0, 130, 124);
 	margin-bottom: 6%;
 }
 
 main {
-	margin-left: 12%;
-	margin-right: 12%;
+	margin-left: 150px;
+	margin-right: 150px;
+}
+
+[aria-current="page"] {
+	font-weight: bold;
 }
 
 section {
 	margin-top: 42px;
 }
 
+
 footer,
 [role="contentinfo"] {
 	bottom: 3px;
 	text-align: center;
-	height:90px;
+	height: 90px;
 	line-height: 90px;
 	color: white;
 	background-color: rgb(0, 130, 124);
 	margin-top: 3%;
 }
 
+p{
+	margin-left:1.2%;
+}
 nav li {
-	display: inline;
+	display: inline-block;
 	margin: 6px;
 }
 
 nav ul {
-	margin-top:0px;
 	padding-left: 0px;
 }
 
@@ -87,24 +91,22 @@ nav a {
 	background-color: rgb(0, 130, 124);
 }
 
-
-nav a:focus-visible,
-nav a:hover {
-	color: white !important;
-	background-color: rgb(0, 130, 124) !important;
-	outline: 3px solid white;
-	outline-offset: 0;
-	box-shadow: 0 0 0 6px #000;
+nav a:focus, nav a:hover {
+	color: white;
+	background-color: rgb(0, 130, 124);
+	outline: 3.6px solid white;
+	font-weight: bold;
 	font-weight: bold;
 	text-decoration: underline !important;
 }
-
 
 h1 {
 	font-size: 1.8em;
 }
 
-h2 {
+h2,
+[aria-level="2"] {
+	margin-top: 2em;
 	font-size: 1.5em;
 	word-wrap: break-word;
 }
@@ -115,20 +117,32 @@ a {
 	background-color: white;
 }
 
-a:visited:not(nav a) {
+a:visited {
 	color: darkgreen;
 	background-color: white;
 
 }
 
 
-a:focus {
+a:focus, a:hover {
 	outline: 3.6px solid darkblue;
 	font-weight: bold;
 	font-weight: bold;
 	background-color: white;
 	text-decoration: underline !important;
 }
+
+
+#logoimg {
+	width: 480px;
+}
+
+
+.rdb {
+	height: 1.2em;
+	width: 1.2em;
+}
+
 
 button:not(#star, .btn) {
 	height: 39px;
@@ -144,27 +158,6 @@ button:not(#star, .btn) {
 }
 
 
-
-[type="button"]:focus,
-button:focus {
-	height: 39px;
-	width: auto;
-	padding: 6px;
-	outline: 3.6px solid darkblue;
-	outline-offset: 3px;
-	font-weight: bold;
-	text-decoration: underline;
-	color: darkblue;
-	background-color: white;
-}
-
-[type="date"]:focus {
-	text-decoration: underline;
-	color: black;
-	background-color: white;
-	border-left: 12px solid darkblue;
-}
-
 #headerlogo {
 	float: left;
 	height: 81px;
@@ -172,17 +165,6 @@ button:focus {
 	margin-left: 18.5px;
 }
 
-#errcont {
-	color: white;
-	background-color: darkred;
-	width: 30em;
-	max-width: 96%;
-	border-radius: 6px;
-}
-
-#favorit{
-	width: auto;
-}
 
 
 
@@ -192,7 +174,6 @@ button:focus {
 		display: block;
 		height: 100%;
 		width: 100%;
-		padding-bottom: 30px;
 	}
 
 	#headerlogo {
@@ -203,21 +184,5 @@ button:focus {
 	header {
 		text-align: center;
 		background-color: rgb(0, 130, 124);
-	}
-}
-
-@media only screen and (max-width: 480px) {
-	.carousel-caption {
-		line-height: 1.2em;
-		font-size: 0.6em;
-
-	}
-	
-	footer{
-		height: auto;
-			}
-	footer p{
-		margin-left: 12%;
-		margin-right: 12%;
 	}
 }

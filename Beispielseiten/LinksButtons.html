@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <header tabindex="-1" id="hd">
-        <img id="balken" src="balken.png" alt="">
-        <img height="60" id="headerlogo" src="LogoPP.png"
+    <header id="hd">
+        <img id="balken" src="Zusatzdateien/Balken.png" alt="">
+        <img height="60" id="headerlogo" src="Zusatzdateien/LogoPP.png"
             alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
-        <nav id="navi" aria-label="Hauptnavigation">
+        <nav role="navigation" id="navi" aria-label="Haupt">
             <ul>
                 <li><a href="Formularelemente.html">Formularelemente</a></li>
                 <li><a href="Tables.html">Tabellen</a></li>
@@ -23,13 +23,15 @@
                 <li><a href="Text.html">Text</a></li>
                 <li><a href="Akkordeon.html">Akkordeon</a></li>
                 <li><a href="karousell.html">Karussell</a></li>
+                <li><a href="Dialog.html">Dialoge</a></li>
+                <li><a href="Kacheln.html">Kacheln</a></li>
             </ul>
         </nav>
     </header>
     <main>
         <div id="testelemente">
             <h1>Links und Buttons</h1>
-            <p>Diese Seite soll veranschaulichen, wie Buttons und Links für Nutzer von Screenreadern beschriftet werden
+            <p>Diese Seite soll veranschaulichen, wie Buttons und Links für Nutzende von Screenreadern beschriftet werden
                 können.</p>
             <h2>Buttons zum Test mit <code>aria-label</code> und <code>title</code></h2>
             <p>Die folgenden Buttons sind mit <code>aria-label</code> und <code>title</code> versehen. Die sichtbare
@@ -53,18 +55,18 @@
             <p id="desctest">Nach dem Betätigen des Links öffnet sich das PDF im Browser. Dieser Absatz ist mit
                 <code>aria-describedby</code> mit dem nachfolgenden Link verknüpft.
             </p>
-            <a href="Test_PDF.pdf" aria-describedby="desctest">zum Test-PDF</a>
+            <a href="Zusatzdateien/Test_PDF.pdf" aria-describedby="desctest">zum Test-PDF</a>
 
             <h2>Rein grafischer Link und Button zum Favorit setzen</h2>
-            <p>Der Folgende grafische Link beinhaltet ein <code>alt</code>-Attribut, welches das Linkziel beschreibt.
+            <p>Der folgende grafische Link beinhaltet ein <code>alt</code>-Attribut, welches das Linkziel beschreibt.
                 Der Button zum Favorit speichern weist das <code>aria-pressed</code>-Attribut auf.</p>
             <div id="graphcont">
-                <a  href="https://www.digitale-barrierefreiheit.de"><img id="logoPP" src="LogoPP.png" width="300"
+                <a  href="https://www.digitale-barrierefreiheit.de"><img id="logoPP" src="Zusatzdateien/LogoPP.png" width="300"
                         alt="zur Seite Digitale Barrierefreiheit der Stiftung Pfennigparade - Die Zukunft zählt auf uns."></a>
                 <button id="star" aria-pressed="false" onclick="favorit()"
                     title="Die Seite der Pfennigparade als Favorit speichern"><img
                         alt="Die Seite der Pfennigparade als Favorit speichern" id="rate" width="48" height="48"
-                        src="star.svg">
+                        src="Zusatzdateien/Star.svg">
                 </button>
                 <div id="favorit" role="status" aria-atomic="true"></div>
             </div>
@@ -74,7 +76,7 @@
             <div>
                 <h2>Vorsicht Tastaturfalle!</h2>
                 <a href="#rettung" aria-describedby="falledesc">zum Überwinden der Tastaturfalle folge diesem Link!</a>
-                <p id="falledesc">Beim Erreichen des nächsten Button gelangst Du bei der Benutzung in eine
+                <p id="falledesc">Beim Erreichen des nächsten Buttons gelangst Du bei der Benutzung in eine
                     Tastaturfalle!
                     Wenn Du gefangen bist musst Du Strg+Pos1 drücken und die Seite neu laden.</p>
                 <button id="falle" onblur="caught()">Hier kommst Du nicht mehr weg!</button>

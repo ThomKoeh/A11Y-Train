@@ -1,20 +1,18 @@
-@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:400');
-
 html {
+	scroll-behavior: smooth;
 	background-color: snow;
 	color: black;
 }
 
 body {
 	font-size: 1.2rem;
-	font-family: 'FiraGO', sans-serif;
+	font-family: Arial, sans-serif;
 	line-height: 1.5em;
 }
 
 div[aria-level="2"] {
 	font-size: 1.5em;
 	font-weight: bold;
-	margin-bottom: 1em;
 }
 
 nav {
@@ -22,8 +20,9 @@ nav {
 	text-align: center;
 	background-image: linear-gradient(rgb(0, 130, 124) 78%, snow);
 	width: 100%;
-	height: 120px;
-	margin-top: 42px;
+	height: 150px;
+	line-height: 150px;
+	margin-top: 0px;
 }
 
 [aria-current="page"] {
@@ -37,12 +36,12 @@ nav {
 
 header {
 	background-color: rgb(0, 130, 124);
-	margin-bottom: 3%;
+	margin-bottom: 6%;
 }
 
 main {
-	margin-left: 12%;
-	margin-right: 12%;
+	margin-left: 150px;
+	margin-right: 150px;
 }
 
 .asterisk {
@@ -66,49 +65,9 @@ footer,
 }
 
 
-nav li {
-	display: inline;
-	margin: 6px;
-}
-
-nav ul {
-	margin-top: 0px;
-	padding-left: 0px;
-}
-
-nav a {
-	color: white;
-	background-color: rgb(0, 130, 124);
-}
-
-nav a:visited {
-	color: white;
-	background-color: rgb(0, 130, 124);
-}
-
-nav a {
-	color: white;
-	background-color: rgb(0, 130, 124);
-}
-
-nav a:focus-visible,
-nav a:hover {
-	color: white !important;
-	background-color: rgb(0, 130, 124) !important;
-	outline: 3px solid white;
-	outline-offset: 0;
-	box-shadow: 0 0 0 6px #000;
-	font-weight: bold;
-	text-decoration: underline !important;
-}
-
-fieldset {
-	width: auto;
-}
 
 h1 {
 	font-size: 1.8em;
-	hyphens:auto;
 }
 
 h2,
@@ -119,62 +78,6 @@ h2,
 }
 
 
-legend {
-	margin-bottom: 24px;
-	font-size: 1.25em
-}
-
-
-label {
-	margin-bottom: 1.5px;
-	display: block;
-	padding-bottom: 4.5px;
-}
-
-form div {
-	margin-bottom: 30px;
-}
-
-input {
-	font-size: 1.2em;
-	max-width: 100%;
-	border: 1px solid hsl(0deg 0% 42%);
-	border-radius: 0.3em;
-	font-size: inherit;
-	padding: 0.3em 0.5em;
-}
-
-#inp2,
-#inp3 {
-	scroll-margin-top: 50px;
-}
-
-select {
-	font-size: 1.2em;
-	max-width: 100%;
-	border: 1px solid hsl(0deg 0% 42%);
-	border-radius: 0.3em;
-	font-size: inherit;
-	padding: 0.3em 0.5em;
-}
-
-
-
-input:focus,
-input:hover {
-	background-color: white;
-	color: black;
-	border-left: 15px solid darkblue;
-}
-
-
-
-select:focus,
-select:hover {
-	border-left: 15px solid darkblue;
-	background-color: white;
-	color: black;
-}
 
 a {
 	color: darkblue;
@@ -190,17 +93,15 @@ a:visited:not(nav a) {
 
 a:focus,
 a:hover {
-	outline: 3px solid darkblue;
-	box-shadow: 0 0 0 6px #FFF;
+	outline: 3.6px solid darkblue;
 	font-weight: bold;
 	font-weight: bold;
 	background-color: white;
 	text-decoration: underline !important;
 }
 
-img:focus-visible{
-	outline: 3px solid darkblue;
-	box-shadow: 0 0 0 6px #FFF;
+img:focus-visible {
+	outline: 3.6px solid darkblue;
 	font-weight: bold;
 	font-weight: bold;
 	background-color: white;
@@ -229,15 +130,9 @@ img:focus-visible{
 	width: 480px;
 }
 
-#logolnk:focus {
-	outline: 3px solid darkblue;
-	outline-offset: 15px;
-	box-shadow: 0 0 0 18px #FFF;
-}
-
-#logolnk {
-	width: 600px;
-	height: auto;
+#logocont a:focus {
+	outline: 6px solid darkblue;
+	outline-offset: 18px;
 }
 
 .rdb {
@@ -247,7 +142,7 @@ img:focus-visible{
 
 .inlinelabel {
 	display: inline-block;
-	vertical-align: middle;
+
 }
 
 
@@ -315,9 +210,8 @@ button:hover {
 	height: 39px;
 	width: auto;
 	padding: 6px;
-	outline: 3px solid darkblue;
-	outline-offset: 1.5px;
-	box-shadow: 0 0 0 3px #FFF;
+	outline: 3.6px solid darkblue;
+	outline-offset: 3px;
 	font-weight: bold;
 	text-decoration: underline;
 	color: darkblue;
@@ -339,9 +233,8 @@ button:hover {
 [type="radio"]:hover {
 	height: 1em;
 	width: 1em;
-	outline-offset: 0;
-	outline: 3px solid darkblue;
-	box-shadow: 0 0 0 6px #FFF;
+	outline-offset: 2.4px;
+	outline: 4.2px solid darkblue;
 	color: black;
 	background-color: white;
 }
@@ -373,8 +266,7 @@ button:hover {
 }
 
 #errcont a:focus {
-	outline: 3px solid white;
-	box-shadow: 0 0 0 6px #000;
+	outline: 3.6px solid white;
 }
 
 #success {
@@ -389,8 +281,7 @@ button:hover {
 	height: 39px;
 	width: auto;
 	padding: 6px;
-	outline: 3px solid darkred;
-	box-shadow: 0 0 0 5px #FFF;
+	outline: 3.6px solid darkred;
 	font-weight: bold;
 	text-decoration: underline;
 	color: darkred;
@@ -414,116 +305,10 @@ button:hover {
 
 .contimg {
 	float: left;
+	display: inline-block;
 	margin: 0px 15px 15px 0px;
 }
 
-#lblby {
-	margin-bottom: 1.5px;
-}
-
-/* sortierbare Tabelle */
-
-table.sortable td,
-table.sortable th {
-	padding: 0.125em 0.25em;
-	width: 8em;
-}
-
-table.sortable th {
-	font-weight: bold;
-	border-bottom: thin solid #888;
-	position: relative;
-	height: 60px;
-}
-
-table.sortable th.no-sort {
-	padding-top: 0.35em;
-}
-
-table.sortable th:nth-child(5) {
-	width: 10em;
-}
-
-table.sortable th button {
-	padding: 4px;
-	margin: 1px;
-	font-size: 100%;
-	font-weight: bold;
-	background: transparent;
-	border: none;
-	display: inline;
-	right: 0;
-	left: 0;
-	top: 0;
-	bottom: 0;
-	width: 100% !important;
-	text-align: left;
-	outline: none;
-	cursor: pointer;
-	padding-right: 30px !important;
-}
-
-table.sortable th button span {
-	position: absolute;
-	right: 9px;
-	margin-left: 9px;
-}
-
-table.sortable th[aria-sort="descending"] span::after {
-	content: "▼";
-	color: white;
-	font-size: 100%;
-	top: 0;
-}
-
-table.sortable th[aria-sort="ascending"] span::after {
-	content: "▲";
-	color: white;
-	font-size: 100%;
-	top: 0;
-}
-
-table.show-unsorted-icon th:not([aria-sort]) button span::after {
-	content: "♢";
-	color: white;
-	font-size: 100%;
-	position: relative;
-	top: -3px;
-	left: -4px;
-}
-
-table.sortable td.num {
-	text-align: right;
-}
-
-table.sortable tbody tr:nth-child(odd) {
-	background-color: #ddd;
-}
-
-/* Focus and hover styling */
-
-table.sortable th button:focus,
-table.sortable th button:hover {
-	padding: 2px;
-	outline: 2px solid black;
-	background-color: #e5f4ff;
-	box-shadow: 0 0 0 3px white;
-}
-
-table.sortable th button:focus span,
-table.sortable th button:hover span {
-	right: 9px;
-	border: 1.5px solid white;
-}
-
-table.sortable th:not([aria-sort]) button:focus span::after,
-table.sortable th:not([aria-sort]) button:hover span::after {
-	content: "▼";
-	color: white;
-	border: 1.5px solid white;
-	font-size: 100%;
-	top: 0;
-}
 
 table {
 	border-collapse: collapse;
@@ -541,10 +326,6 @@ table th {
 
 table tr:nth-child(even) {
 	background-color: azure;
-}
-
-table tr:nth-child(odd) {
-	background-color: #ddd;
 }
 
 [role="table"] {
@@ -566,29 +347,23 @@ table tr:nth-child(odd) {
 	display: table-cell;
 	padding: 0.125em 0.15em;
 	width: 10em;
-	border: 1px solid black;
 }
 
 [role="table"] [role="columnheader"] {
 	font-weight: bold;
-	border-bottom: 2px solid black;
+	border-bottom: 1px solid black;
 }
 
 [role="table"] [role="rowgroup"]:last-child [role="row"]:nth-child(odd) {
-	background-color: #ddd;
+	background-color: #F0FFFF;
 }
 
-[role="table"] [role="rowgroup"]:last-child [role="row"]:nth-child(even) {
-	background-color: azure;
-}
 
-/*aria-Tabelle*/
 #ariath {
 	background-color: #DAEDEA !important;
 	color: black !important;
 }
 
-/*Grafiken*/
 #flexcont {
 	display: flex;
 	column-gap: 12%;
@@ -619,99 +394,6 @@ table tr:nth-child(odd) {
 	margin-right: auto;
 }
 
-/*Kacheln*/
-#cardcont {
-	display: flex;
-	gap: 2.5em;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-#cardcont li{
-	display: inline-block;
-}
-
-.carditem, .carditem2 {
-	background-color: dimgrey;
-	color: white;
-	padding: 15px;
-	border-radius: 9px;
-	position: relative;
-	width: 15em;
-	word-wrap: break-word;
-	box-shadow: 0px 0px 24px dimgrey;
-}
-
-#cardcont li{
-		display: inline-block;
-}
-
-.carditem a, .carditem2 a{
-	background-color: dimgrey !important;
-	color: white !important;
-	text-decoration: none !important;
-	line-height: 1.2em;
-	}
-
-.carditem:focus-within{
-	outline: 6px solid darkblue;
-	outline-offset: 3px;
-}
-
-.cardall a, .cardall a:hover{
-	font-weight: normal;
-}
-
-.carditem a:focus{
-	outline:none;
-	box-shadow: none;
-}
-
-.carditem a:hover{
-	outline:none;
-	box-shadow: none;
-
-}
-
-.carditem2 a:focus{
-	text-decoration: underline !important;
-	outline:none;
-	box-shadow: none;
-}
-
-.carditem2 a:hover{
-	text-decoration: underline !important;
-	outline:none;
-	box-shadow: none;
-}
-
-
-.carditem:hover{
-	outline: 6px solid darkblue;
-	outline-offset: 3px;
-}
-
-.carditem:focus-within a:focus a:hover {
-    text-decoration: none !important;
-	outline: none !important;
-	border: none !important;
-}
-
-
-.carditem a::after{
-		content:'';
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		}
-
-.carditem img, .carditem2 img{
-	width: 100%;
-}
-
-
 .sr-only {
 	clip: rect(1px, 1px, 1px, 1px);
 	clip-path: inset(50%);
@@ -723,7 +405,6 @@ table tr:nth-child(odd) {
 	position: absolute;
 }
 
-/* aria-radiogroup */
 [role="radiogroup"] {
 	padding: 0;
 	margin: 0;
@@ -769,37 +450,7 @@ table tr:nth-child(odd) {
 	cursor: pointer;
 }
 
-/* Dialog */
-dialog {
-	width: 50%;
-}
 
-dialog h3:focus {
-	outline: none;
-}
-
-dialog::backdrop {
-	background-color: black;
-	opacity: 0.6;
-}
-
-#dialogicon {
-	float: right;
-	line-height: 1.2em;
-	font-size: 1.2em;
-	height: 44px !important;
-	width: 44px !important;
-}
-
-#dialogicon:focus,
-#dialogicon:hover {
-	text-decoration: none;
-}
-
-math:focus{
-	outline: 3px solid darkblue;
-	outline-offset: 6px;
-}
 
 @media only screen and (max-width: 1200px) {
 	nav {
@@ -819,6 +470,12 @@ math:focus{
 	header {
 		text-align: center;
 		background-color: rgb(0, 130, 124);
+	}
+
+	main {
+		margin-left: 15px;
+		margin-right: 1px;
+
 	}
 
 	.flexitem {

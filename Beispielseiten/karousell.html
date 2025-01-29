@@ -19,6 +19,7 @@
     .carousel {
       background-color: #eee;
       max-width: 900px;
+      box-shadow: 0px 0px 24px rgb(94, 154, 206);
     }
 
     .carousel .carousel-inner {
@@ -106,7 +107,7 @@
       border: 2px solid black;
       background-color: white;
       outline: none;
-      border-width: 2px solid #fff;
+      border-width: 2px;
       color: black;
     }
 
@@ -164,7 +165,7 @@
       stroke: black;
       fill: black;
       stroke-width: 1px;
-      opacity: 0.6;
+      opacity: 1;
     }
 
     .carousel .controls svg .border {
@@ -203,13 +204,14 @@
     .carousel .controls button:focus svg .background,
     .carousel .controls button:hover svg .background,
     .carousel .controls button:hover svg .border {
-      fill: #005aaf;
-      stroke: #005aaf;
+      fill: #5E9ACE;
+      stroke: black;
       opacity: 1;
-    }
+        }
 
     .carousel .controls button:focus svg .border {
       fill: white;
+      stroke: black;
       fill: transparent;
       color: black;
     }
@@ -629,11 +631,11 @@
 </head>
 
 <body>
-  <header tabindex="-1" id="hd">
-    <img id="balken" src="balken.png" alt="">
-    <img height="60" id="headerlogo" src="LogoPP.png"
+  <header id="hd">
+    <img id="balken" src="Zusatzdateien/Balken.png" alt="">
+    <img height="60" id="headerlogo" src="Zusatzdateien/LogoPP.png"
       alt="Logo der Stiftung Pfennigparade - Die Zunkunft zählt auf uns.">
-    <nav aria-label="Hauptnavigation">
+    <nav role="navigation" aria-label="Haupt">
       <ul>
         <li><a href="Formularelemente.html">Formularelemente</a></li>
         <li><a href="Tables.html">Tabellen</a></li>
@@ -643,6 +645,8 @@
         <li><a href="Text.html">Text</a></li>
         <li><a href="Akkordeon.html">Akkordeon</a></li>
         <li><a href="karousell.html" aria-current="page">Karussell</a></li>
+        <li><a href="Dialog.html">Dialoge</a></li>
+        <li><a href="Kacheln.html">Kacheln</a></li>
       </ul>
     </nav>
   </header>
@@ -676,10 +680,11 @@
             </svg></button>
         </div>
         <div id="myCarousel-items" class="carousel-items" aria-live="off">
-          <div class="carousel-item active" role="group" role="slider" aria-orientation="vertical"
+          <div class="carousel-item active" role="group" role="slider"
             aria-roledescription="Folie" aria-label="1 von 6">
             <div class="carousel-image">
-              <a href="#"><img src="tastatur.jpg" alt="Ein Nutzer arbeitet mit einer Einhand-Tastatur"></a>
+              <a href="#"><img src="Zusatzdateien/tastatur.jpg"
+                  alt="Ein Nutzer arbeitet mit einer Einhand-Tastatur"></a>
             </div>
 
             <div class="carousel-caption">
@@ -691,7 +696,8 @@
           </div> <!-- .item -->
           <div class="carousel-item" role="group" role="slider" aria-roledescription="Folie" aria-label="2 von 6">
             <div class="carousel-image">
-              <a href="#"><img src="testing.jpg" alt="Ein Experte für Barrierefreiheit vor seinem Bildschirm"></a>
+              <a href="#"><img src="Zusatzdateien/testing.jpg"
+                  alt="Ein Experte für Barrierefreiheit vor seinem Bildschirm"></a>
             </div>
 
             <div class="carousel-caption">
@@ -703,7 +709,8 @@
           </div> <!-- .item -->
           <div class="carousel-item" role="group" role="slider" aria-roledescription="Folie" aria-label="3 von 6">
             <div class="carousel-image">
-              <a href="#"><img src="braille.jpg" alt="Ein blinder Nutzer arbeitet mit der Braillezeile."></a>
+              <a href="#"><img src="Zusatzdateien/Braille.jpg"
+                  alt="Ein blinder Nutzer arbeitet mit der Braillezeile."></a>
             </div>
 
             <div class="carousel-caption">
@@ -715,7 +722,7 @@
           </div> <!-- .item -->
           <div class="carousel-item" role="group" role="slider" aria-roledescription="Folie" aria-label="4 von 6">
             <div class="carousel-image">
-              <a href="#"><img src="wall1.jpg" alt="Eine braune Wand"></a>
+              <a href="#"><img src="Zusatzdateien/wall1.jpg" alt="Eine braune Wand"></a>
             </div>
             <div class="carousel-caption">
               <h3><a href="#" id="carousel-label-4">Neue dekorative Farben verfügbar.</a></h3>
@@ -726,7 +733,8 @@
           </div> <!-- .item -->
           <div class="carousel-item" role="group" role="slider" aria-roledescription="Folie" aria-label="5 von 6">
             <div class="carousel-image">
-              <a href="#"><img src="tree.jpg" alt="eine Katze sitz vor dem Vollmond auf einem Baumstamm"></a>
+              <a href="#"><img src="Zusatzdateien/tree.jpg"
+                  alt="eine Katze sitz vor dem Vollmond auf einem Baumstamm"></a>
             </div>
             <div class="carousel-caption">
               <h3><a href="#" id="carousel-label-5">Mondfinsternis: Samstag, 19 Uhr.</a></h3>
@@ -737,7 +745,7 @@
           </div> <!-- .item -->
           <div class="carousel-item" role="group" role="slider" aria-roledescription="Folie" aria-label="6 von 6">
             <div class="carousel-image">
-              <a href="#"><img src="qualle.jpg" alt="eine Gruppe Ohrenquallen"></a>
+              <a href="#"><img src="Zusatzdateien/qualle.jpg" alt="eine Gruppe Ohrenquallen"></a>
             </div>
 
             <div class="carousel-caption">
